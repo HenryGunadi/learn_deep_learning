@@ -1,0 +1,31 @@
+### Deep Learning Workflow
+1. Forward pass
+2. Calculate loss function
+3. Optimizer zero grad
+4. Backpropagation
+5. Optimizer
+
+### Activation Functions
+1. Relu
+2. Sigmoid
+3. Softmax
+-- The key concept of activation functions is to convert raw outputs from the ANN to interpretable outputs that corresponds to our data
+-- It is used in all of the hidden layers and used in our output layers in classification problems
+
+### In train mode
+model_0.train()
+
+### In predicting values with our model we would like to turn off our gradient tracking and set our model mode to model.eval()
+for e.g.:
+    ### Training mode :
+    model_0.train()
+    --> our training loop corresponds
+
+    ### Predicting :
+    model_0.eval()
+
+    with torch.inference_mode(): --> turns off gradient tracking
+        y_pred = model_0(X_test)
+
+    y_pred
+
