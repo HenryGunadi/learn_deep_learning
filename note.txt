@@ -11,6 +11,7 @@
 3. Softmax
 -- The key concept of activation functions is to convert raw outputs from the ANN to interpretable outputs that corresponds to our data
 -- It is used in all of the hidden layers and used in our output layers in classification problems
+-- Also ReLU introduces non-linearity to our model so that our model could make predicitions to non-linear problems
 
 ### In train mode
 model_0.train()
