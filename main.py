@@ -1,10 +1,18 @@
-import torch
+from pathlib import Path
 
-model = torch.load('models/01_pytorch_workflow_model_0.pth', weights_only=False)
+def main():
+    testing_path = Path("./")
+    file_path = testing_path / "lol.txt"
 
-if (model):
-    print("Model loaded")
-    print(model)
-else:
-    print("Model not found!")
+    if not file_path.exists():
+        print("Downloading file...")
+
+        with open(file_path, "wb") as f:
+            f.write(b"Hello world")
+    else:
+        print("File already exists")
+
     
+
+if __name__ == "__main__":
+    main()
