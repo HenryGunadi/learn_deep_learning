@@ -1,18 +1,13 @@
 from pathlib import Path
+import os
 
 def main():
-    testing_path = Path("./")
-    file_path = testing_path / "lol.txt"
+    directory = "./testing"
 
-    if not file_path.exists():
-        print("Downloading file...")
+    scan_folder = os.scandir(directory)
 
-        with open(file_path, "wb") as f:
-            f.write(b"Hello world")
-    else:
-        print("File already exists")
-
+    # test = [1, 2, 3]
+    # ranges = 
     
-
 if __name__ == "__main__":
     main()
